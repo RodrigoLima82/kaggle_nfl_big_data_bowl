@@ -1,2 +1,5 @@
 
 .DS_Store
+data/train.csv
+exemplos/desafio_grupo_zap.ipynb
+exemplos/Kernel_competicao_dsa_set_2019_final.ipynb
