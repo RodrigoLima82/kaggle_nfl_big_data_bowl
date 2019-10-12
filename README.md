@@ -1,4 +1,6 @@
-# kaggle_nfl_big_data_bowl
+# NFL Big Data Bowl
+https://www.kaggle.com/c/nfl-big-data-bowl-2020/overview
+
 How many yards will an NFL player gain after receiving a handoff?
 
 “The running back takes the handoff… he breaks a tackle…spins… and breaks free! One man to beat! Past the 50-yard-line! To the 40! The 30! He! Could! Go! All! The! Way!”
