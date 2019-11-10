@@ -1,0 +1,19 @@
+df['PlayerBMI'] = 703*df['PlayerWeight']/df['PlayerHeight']**2
+    
+bins = [9 + i*10 for i in range(0,10)]
+df['JerseyNumber'] = pd.cut(df['JerseyNumber'], bins=bins)
+
+df["GameHour"] = df['GameClock'].str.split(':', expand=True)[0].astype('int16')
+df["GameMinute"] = df['GameClock'].str.split(':', expand=True)[1].astype('int16')
+
+
+player_profile=aaa.loc[:,['DisplayName','Position','NflId' 'PlayerBirthDate', 'PlayerWeight', 'PlayerCollegeName']].drop_duplicates()
+player_profile_2018=aaa[aaa.Season==2018]
+player_profile_2018 = player_profile_2018.loc[: ,['DisplayName','Position','NflId' 'PlayerBirthDate', 'PlayerWeight', 'PlayerCollegeName'] ].drop_duplicates()
+
+z = player_profile_2018.groupby('Position')['PlayerWeight'].agg(['min', 'median', 'mean', 'max']).round(1).sort_values(by=['median'], 
+                                                                                                                   ascending=False)
+z['Avg Mass (kg)'] = (z['mean'] * 0.45359237).round(1)
+z
+
+df04 = tf.groupby('PossessionTeam')['Yards'].agg(sum).sort_values(ascending=True)
