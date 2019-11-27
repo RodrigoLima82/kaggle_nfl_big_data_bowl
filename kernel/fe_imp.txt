@@ -1,0 +1,11 @@
+Velocity_y
+A
+YardLine
+def_min_dist
+Yards
+fe5
+fe10
+fe11
+YardLine_std
+Start
+YardsFromOwnGoal
